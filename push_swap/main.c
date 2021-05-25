@@ -23,7 +23,7 @@ void push_swap(int argc, char * argv[]){
 	temp = *a_list;
 	while (temp)
 	{
-		printf("%d", temp->content);
+		printf("%d", temp->cont);
 		temp = temp->next;
 	}
 	exit(0);

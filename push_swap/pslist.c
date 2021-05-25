@@ -1,13 +1,13 @@
 #include "push_swap.h"
 
-t_pslist	*new_pslist(int content, int index)
+t_pslist	*new_pslist(int cont, int index)
 {
 	t_pslist	*new;
 
 	new = (t_pslist *)malloc(sizeof(t_pslist));
 	if (new)
 	{
-		new->content = content;
+		new->cont = cont;
 		new->index = index;
 		new->next = NULL;
 		new->forw = NULL;
