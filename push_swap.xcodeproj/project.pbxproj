@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		249162B6265D1DEC002DA805 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 249162B5265D1DEC002DA805 /* main.c */; };
+		249162BE265D21B1002DA805 /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 249162BD265D21B1002DA805 /* libft.a */; };
+		24916321265D23D1002DA805 /* long_atoi.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916320265D23D1002DA805 /* long_atoi.c */; };
+		24916323265D2644002DA805 /* push_swap.h in Sources */ = {isa = PBXBuildFile; fileRef = 24916322265D2644002DA805 /* push_swap.h */; };
+		24916325265D288D002DA805 /* pslist.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916324265D288D002DA805 /* pslist.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,11 @@
 /* Begin PBXFileReference section */
 		249162B2265D1DEC002DA805 /* push_swap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = push_swap; sourceTree = BUILT_PRODUCTS_DIR; };
 		249162B5265D1DEC002DA805 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		249162BD265D21B1002DA805 /* libft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libft.a; sourceTree = "<group>"; };
+		2491631F265D2336002DA805 /* libft */ = {isa = PBXFileReference; lastKnownFileType = folder; name = libft; path = ../libc/libft/libft; sourceTree = "<group>"; };
+		24916320265D23D1002DA805 /* long_atoi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = long_atoi.c; sourceTree = "<group>"; };
+		24916322265D2644002DA805 /* push_swap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = push_swap.h; sourceTree = "<group>"; };
+		24916324265D288D002DA805 /* pslist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pslist.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249162BE265D21B1002DA805 /* libft.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +53,7 @@
 			children = (
 				249162B4265D1DEC002DA805 /* push_swap */,
 				249162B3265D1DEC002DA805 /* Products */,
+				2491631F265D2336002DA805 /* libft */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				249162B5265D1DEC002DA805 /* main.c */,
+				24916320265D23D1002DA805 /* long_atoi.c */,
+				24916324265D288D002DA805 /* pslist.c */,
+				24916322265D2644002DA805 /* push_swap.h */,
+				249162BD265D21B1002DA805 /* libft.a */,
 			);
 			path = push_swap;
 			sourceTree = "<group>";
@@ -119,6 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24916321265D23D1002DA805 /* long_atoi.c in Sources */,
+				24916323265D2644002DA805 /* push_swap.h in Sources */,
+				24916325265D288D002DA805 /* pslist.c in Sources */,
 				249162B6265D1DEC002DA805 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +257,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/push_swap",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +269,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/push_swap",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

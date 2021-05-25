@@ -1,15 +1,56 @@
-//
-//  main.c
-//  push_swap
-//
-//  Created by Malena Dewayne on 5/25/21.
-//  Copyright © 2021 Malena Dewayne. All rights reserved.
-//
+#include "push_swap.h"
 
-#include <stdio.h>
+void push_swap(int argc, char * argv[]){
 
-int main(int argc, const char * argv[]) {
-	// insert code here...
-	printf("Hello, World!\n");
-	return 0;
+	int i = 0;
+	t_pslist **a_list;
+	t_pslist *temp;
+	long res;
+	a_list = (t_pslist **)malloc(sizeof(t_pslist *));
+	while (argv[++i])
+	{
+		res = long_atoi(argv[i]);
+		temp = new_pslist((int)res, 0);
+		if (res > 2147483647 || res < -2147483648 || !a_list || !temp)
+		{
+			write(1, "Error\n", 6);
+			break;
+		}
+		ft_pslstadd_back(a_list, temp);
+	}
+	if (i < 1)
+		return;
+	temp = *a_list;
+	while (temp)
+	{
+		printf("%d", temp->content);
+		temp = temp->next;
+	}
+	exit(0);
 }
+
+int main()
+{
+	char *mass[8] = {"program", "44", "22", "-5", "7"};
+	push_swap(3, mass);
+}
+//int main(int argc, const char * argv[]) {
+//
+//	int i = 0;
+//	t_pslist **a_list;
+//	long res;
+//	a_list = (t_pslist **)malloc(sizeof(t_pslist *));
+//	while (argv[++i])
+//	{
+//		res = long_atoi(argv[i]);
+//		if (res > 2147483647 || res < -2147483648 || !a_list)
+//		{
+//			write(1, "Error\n", 6);
+//			return 0;
+//		}
+//		ft_pslstadd_back(a_list, new_pslist((int)res, 0));
+//
+//	}
+//	printf("Hello, World!\n");
+//	return 0;
+//}
