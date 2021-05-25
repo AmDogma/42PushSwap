@@ -1,32 +1,35 @@
 #include "push_swap.h"
 
-t_pslist	*new_pslist(int cont, int index)
+t_ps	*new_pslist(int cont, int index)
 {
-	t_pslist	*new;
+	t_ps	*new;
 
-	new = (t_pslist *)malloc(sizeof(t_pslist));
+	new = (t_ps *)malloc(sizeof(t_ps));
 	if (new)
 	{
 		new->cont = cont;
 		new->index = index;
 		new->next = NULL;
-		new->forw = NULL;
+		new->back = NULL;
 	}
 	return (new);
 }
 
-void	ft_pslstadd_back(t_pslist **lst, t_pslist *new)
+void	ft_pslstadd_back(t_ps **lst, t_ps *new)
 {
-	t_pslist	*temp;
+	t_ps	*temp;
 
 	temp = *lst;
 	if (!*lst)
 		*lst = new;
-	if (lst && temp)
+	if (temp)
 	{
 		while (temp->next)
 			temp = temp->next;
 	}
 	if (temp && new)
+	{
 		temp->next = new;
+		new->back = temp;
+	}
 }

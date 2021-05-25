@@ -1,29 +1,48 @@
 #include "push_swap.h"
 
+static int	make_t(t_anb *stack)
+{
+	t_ps **a_list;
+	t_ps **b_list;
+
+	a_list = (t_ps **)malloc(sizeof(t_ps *));
+	b_list = (t_ps **)malloc(sizeof(t_ps *));
+	if (!a_list || !b_list)
+		return (-1);
+	stack->a = a_list;
+	stack->b = b_list;
+	return (0);
+}
+
 void push_swap(int argc, char * argv[]){
 
-	int i = 0;
-	t_pslist **a_list;
-	t_pslist *temp;
-	long res;
-	a_list = (t_pslist **)malloc(sizeof(t_pslist *));
+	int		i;
+	t_anb	stack;
+	t_ps	*temp;
+	long	res;
+
+	i = make_t(&stack);
 	while (argv[++i])
 	{
 		res = long_atoi(argv[i]);
 		temp = new_pslist((int)res, 0);
-		if (res > 2147483647 || res < -2147483648 || !a_list || !temp)
+		if (res > 2147483647 || res < -2147483648 || !temp || !i)
 		{
 			write(1, "Error\n", 6);
 			break;
 		}
-		ft_pslstadd_back(a_list, temp);
+		ft_pslstadd_back(stack.a, temp);
+
 	}
-	if (i < 1)
-		return;
-	temp = *a_list;
+	if (i < 2) // еще нужен чекер на дубликаты
+		exit(0);
+	else
+		ft_sa(stack.a); // тут выход на поиск правильной сортировкиж
+	//delete this part;
+	temp = *(stack.a);
 	while (temp)
 	{
-		printf("%d", temp->cont);
+		printf("%d\n", temp->cont);
 		temp = temp->next;
 	}
 	exit(0);
