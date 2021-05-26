@@ -1,6 +1,6 @@
-#include "/Users/mdewayne/Desktop/pool/libc/libft/libft/libft.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 typedef struct s_ps
 {
@@ -19,7 +19,6 @@ typedef struct s_anb
 long	long_atoi(const char *str);
 t_ps	*new_pslist(int cont, int index);
 void	ft_pslstadd_back(t_ps **lst, t_ps *new);
-void	ft_sa(t_ps **some_list);
-void	ft_sb(t_ps **some_list);
-void	ft_ss(t_ps **some_list);
-void	ft_swap(t_ps **some_list, t_ps *temp);
+void	ft_s(t_anb *stack, char c);
+void	ft_p(t_anb *stack, char c);
+

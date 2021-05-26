@@ -9,6 +9,8 @@ static int	make_t(t_anb *stack)
 	b_list = (t_ps **)malloc(sizeof(t_ps *));
 	if (!a_list || !b_list)
 		return (-1);
+	*a_list = NULL;
+	*b_list = NULL;
 	stack->a = a_list;
 	stack->b = b_list;
 	return (0);
@@ -26,7 +28,7 @@ void push_swap(int argc, char * argv[]){
 	{
 		res = long_atoi(argv[i]);
 		temp = new_pslist((int)res, 0);
-		if (res > 2147483647 || res < -2147483648 || !temp || !i)
+		if (res > 2147483647 || res < -2147483648 || !temp || !i) // нужен чекер на дубликаты
 		{
 			write(1, "Error\n", 6);
 			break;
@@ -34,10 +36,11 @@ void push_swap(int argc, char * argv[]){
 		ft_pslstadd_back(stack.a, temp);
 
 	}
-	if (i < 2) // еще нужен чекер на дубликаты
-		exit(0);
-	else
-		ft_sa(stack.a); // тут выход на поиск правильной сортировкиж
+	ft_s(&stack, 'a');
+
+
+
+	// тут выход на поиск правильной сортировкиж
 	//delete this part;
 	temp = *(stack.a);
 	while (temp)
