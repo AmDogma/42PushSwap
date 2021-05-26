@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		244A7F26265E848700E703C2 /* rotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 244A7F25265E848700E703C2 /* rotate.c */; };
+		244A7F26265E848700E703C2 /* oper_r.c in Sources */ = {isa = PBXBuildFile; fileRef = 244A7F25265E848700E703C2 /* oper_r.c */; };
 		249162B6265D1DEC002DA805 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 249162B5265D1DEC002DA805 /* main.c */; };
-		24916321265D23D1002DA805 /* long_atoi.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916320265D23D1002DA805 /* long_atoi.c */; };
+		24916321265D23D1002DA805 /* utils_atoi.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916320265D23D1002DA805 /* utils_atoi.c */; };
 		24916323265D2644002DA805 /* push_swap.h in Sources */ = {isa = PBXBuildFile; fileRef = 24916322265D2644002DA805 /* push_swap.h */; };
-		24916325265D288D002DA805 /* pslist.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916324265D288D002DA805 /* pslist.c */; };
-		24916329265D7658002DA805 /* push_swap.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916328265D7658002DA805 /* push_swap.c */; };
+		24916325265D288D002DA805 /* utils_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916324265D288D002DA805 /* utils_list.c */; };
+		24916329265D7658002DA805 /* oper_ps.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916328265D7658002DA805 /* oper_ps.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,13 +28,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		244A7F25265E848700E703C2 /* rotate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rotate.c; sourceTree = "<group>"; };
+		244A7F25265E848700E703C2 /* oper_r.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = oper_r.c; sourceTree = "<group>"; };
 		249162B2265D1DEC002DA805 /* push_swap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = push_swap; sourceTree = BUILT_PRODUCTS_DIR; };
 		249162B5265D1DEC002DA805 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		24916320265D23D1002DA805 /* long_atoi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = long_atoi.c; sourceTree = "<group>"; };
+		24916320265D23D1002DA805 /* utils_atoi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils_atoi.c; sourceTree = "<group>"; };
 		24916322265D2644002DA805 /* push_swap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = push_swap.h; sourceTree = "<group>"; };
-		24916324265D288D002DA805 /* pslist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pslist.c; sourceTree = "<group>"; };
-		24916328265D7658002DA805 /* push_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = push_swap.c; sourceTree = "<group>"; };
+		24916324265D288D002DA805 /* utils_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils_list.c; sourceTree = "<group>"; };
+		24916328265D7658002DA805 /* oper_ps.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = oper_ps.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				249162B5265D1DEC002DA805 /* main.c */,
-				24916328265D7658002DA805 /* push_swap.c */,
-				244A7F25265E848700E703C2 /* rotate.c */,
-				24916320265D23D1002DA805 /* long_atoi.c */,
-				24916324265D288D002DA805 /* pslist.c */,
+				24916328265D7658002DA805 /* oper_ps.c */,
+				244A7F25265E848700E703C2 /* oper_r.c */,
+				24916320265D23D1002DA805 /* utils_atoi.c */,
+				24916324265D288D002DA805 /* utils_list.c */,
 				24916322265D2644002DA805 /* push_swap.h */,
 			);
 			path = push_swap;
@@ -134,11 +134,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24916329265D7658002DA805 /* push_swap.c in Sources */,
-				244A7F26265E848700E703C2 /* rotate.c in Sources */,
-				24916321265D23D1002DA805 /* long_atoi.c in Sources */,
+				24916329265D7658002DA805 /* oper_ps.c in Sources */,
+				244A7F26265E848700E703C2 /* oper_r.c in Sources */,
+				24916321265D23D1002DA805 /* utils_atoi.c in Sources */,
 				24916323265D2644002DA805 /* push_swap.h in Sources */,
-				24916325265D288D002DA805 /* pslist.c in Sources */,
+				24916325265D288D002DA805 /* utils_list.c in Sources */,
 				249162B6265D1DEC002DA805 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

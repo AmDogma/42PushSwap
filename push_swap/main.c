@@ -18,12 +18,14 @@ static int	make_t(t_anb *stack)
 
 static int dubl_ch(t_ps *temp, long res)
 {
-	while (temp && temp->next)
+	while (temp)
 	{
-		if (res == (long)temp->cont || res > 2147483647 || res < -2147483648)
+		if (res == (long)temp->cont)
 			return (1);
 		temp = temp->next;
 	}
+	if (res > 2147483647 || res < -2147483648)
+		return (1);
 	return (0);
 }
 
@@ -72,6 +74,6 @@ void push_swap(int argc, char * argv[]){
 
 int main(int argc, const char * argv[])
 {
-	char *mass[8] = {"program", "-4", "-7", "-5", "7"};
+	char *mass[8] = {"program", "-2147483648", "22", "7", "2147483647"};
 	push_swap(3, mass);
 }
