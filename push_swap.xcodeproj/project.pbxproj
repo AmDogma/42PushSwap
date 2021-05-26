@@ -12,8 +12,7 @@
 		24916321265D23D1002DA805 /* long_atoi.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916320265D23D1002DA805 /* long_atoi.c */; };
 		24916323265D2644002DA805 /* push_swap.h in Sources */ = {isa = PBXBuildFile; fileRef = 24916322265D2644002DA805 /* push_swap.h */; };
 		24916325265D288D002DA805 /* pslist.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916324265D288D002DA805 /* pslist.c */; };
-		24916327265D6A50002DA805 /* swap.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916326265D6A50002DA805 /* swap.c */; };
-		24916329265D7658002DA805 /* push.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916328265D7658002DA805 /* push.c */; };
+		24916329265D7658002DA805 /* push_swap.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916328265D7658002DA805 /* push_swap.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +34,7 @@
 		24916320265D23D1002DA805 /* long_atoi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = long_atoi.c; sourceTree = "<group>"; };
 		24916322265D2644002DA805 /* push_swap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = push_swap.h; sourceTree = "<group>"; };
 		24916324265D288D002DA805 /* pslist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pslist.c; sourceTree = "<group>"; };
-		24916326265D6A50002DA805 /* swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = swap.c; sourceTree = "<group>"; };
-		24916328265D7658002DA805 /* push.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = push.c; sourceTree = "<group>"; };
+		24916328265D7658002DA805 /* push_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = push_swap.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				249162B5265D1DEC002DA805 /* main.c */,
-				24916326265D6A50002DA805 /* swap.c */,
-				24916328265D7658002DA805 /* push.c */,
+				24916328265D7658002DA805 /* push_swap.c */,
 				244A7F25265E848700E703C2 /* rotate.c */,
 				24916320265D23D1002DA805 /* long_atoi.c */,
 				24916324265D288D002DA805 /* pslist.c */,
@@ -137,10 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24916329265D7658002DA805 /* push.c in Sources */,
+				24916329265D7658002DA805 /* push_swap.c in Sources */,
 				244A7F26265E848700E703C2 /* rotate.c in Sources */,
 				24916321265D23D1002DA805 /* long_atoi.c in Sources */,
-				24916327265D6A50002DA805 /* swap.c in Sources */,
 				24916323265D2644002DA805 /* push_swap.h in Sources */,
 				24916325265D288D002DA805 /* pslist.c in Sources */,
 				249162B6265D1DEC002DA805 /* main.c in Sources */,
