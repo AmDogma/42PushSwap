@@ -30,7 +30,7 @@ static void ft_rotate(t_ps **some)
 
 void ft_r(t_anb *stack, char c)
 {
-	if (c == 'a' && *(stack->a) && (*(stack->a))->next)
+	if (c == 'a' && *(stack->a) && (*(stack->a))->next) // do we need check??
 	{
 		ft_rotate(stack->a);
 		write(1, "ra\n", 3);
@@ -40,17 +40,17 @@ void ft_r(t_anb *stack, char c)
 		ft_rotate(stack->b);
 		write(1, "rb\n", 3);
 	}
-	else if (c == 'r')
+	else if (c == 'r') // && *(stack->b) && (*(stack->b))->next && *(stack->a) && (*(stack->a))->next
 	{
-		ft_r(stack, 'a');
-		ft_r(stack, 'b');
+		ft_rotate(stack->a);
+		ft_rotate(stack->b);
 		write(1, "rr\n", 3);
 	}
 }
 
 void ft_rr(t_anb *stack, char c)
 {
-	if (c == 'a' && *(stack->a) && (*(stack->a))->next)
+	if (c == 'a' && *(stack->a) && (*(stack->a))->next)  // do we need check??
 	{
 		ft_rotate_r(stack->a);
 		write(1, "rra\n", 4);
@@ -60,10 +60,10 @@ void ft_rr(t_anb *stack, char c)
 		ft_rotate_r(stack->b);
 		write(1, "rrb\n", 4);
 	}
-	else if (c == 'r')
+	else if (c == 'r') // && *(stack->b) && (*(stack->b))->next && *(stack->a) && (*(stack->a))->next
 	{
-		ft_rr(stack, 'a');
-		ft_rr(stack, 'b');
+		ft_rotate_r(stack->a);
+		ft_rotate_r(stack->b);
 		write(1, "rrr\n", 4);
 	}
 }

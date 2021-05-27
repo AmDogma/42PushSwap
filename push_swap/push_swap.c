@@ -60,13 +60,13 @@ void push_swap(int argc, char * argv[]){
 		}
 		ft_pslstadd_back(stack.a, temp);
 	}
-	if (sort_ch(*(stack.a)))// тут выход на поиск правильной сортировки
-		ft_r(&stack, 'a');
-
+	if (sort_ch(*(stack.a)))// тут выход на поиск правильной сортировки в зависимости от кол-ва
+		ft_sort(&stack);
 	temp = *(stack.a); //delete this part
 	while (temp)
 	{
-		printf("%d\n", temp->cont);
+		printf("ind %d | ", temp->index);
+		printf("con %d\n", temp->cont);
 		temp = temp->next;
 	} //delete this part;
 	exit(0);
@@ -74,6 +74,9 @@ void push_swap(int argc, char * argv[]){
 
 int main(int argc, const char * argv[])
 {
-	char *mass[8] = {"program", "-2147483648", "22", "7", "2147483647"};
+	char *mass[18] = {"program", "2323223", "243424432", "1", "5", "44", "94", "-2"};
 	push_swap(3, mass);
+
+
+	return 0;
 }

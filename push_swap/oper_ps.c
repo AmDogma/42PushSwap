@@ -49,12 +49,12 @@ void ft_s(t_anb *stack, char c)
 	else if (c == 'b' && *(stack->b) && (*(stack->b))->next)
 	{
 		ft_swap(stack->b, (*(stack->b))->next);
-		write(1, "sa\n", 3);
+		write(1, "sb\n", 3);
 	}
-	else if (c == 's')
+	else if (c == 's') //  && *(stack->b) && (*(stack->b))->next && *(stack->a) && (*(stack->a))->next
 	{
-		ft_s(stack, 'a');
-		ft_s(stack, 'b');
+		ft_swap(stack->a, (*(stack->a))->next);
+		ft_swap(stack->b, (*(stack->b))->next);
 		write(1, "ss\n", 3);
 	}
 }
