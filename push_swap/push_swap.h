@@ -1,6 +1,7 @@
 #include <stdio.h> // del this
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h> // can be used?
 
 typedef struct s_ps
 {
@@ -27,3 +28,5 @@ void	ft_sort(t_anb *stack);
 void	ft_min_sort(t_ps *one, t_ps *two, t_ps *three, t_anb *stack);
 void	ft_med_sort(t_anb *stack, int count);
 void	ft_max_sort(t_anb *stack, int count);
+int		ft_count(t_ps *temp);
+int		sort_ch(t_ps *temp);

@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-static int	ft_count(t_ps *temp)
+int	ft_count(t_ps *temp)
 {
 	int	i;
 
@@ -17,25 +17,26 @@ static void	ft_index(t_ps **a, int count)
 {
 	int	ind;
 	t_ps *temp;
+	t_ps *minimum;
 	int	min;
 
 	ind = 1;
 	min = (*a)->cont;
+	minimum = NULL;
 	while (count >= ind)
 	{
 		temp = *a;
 		while (temp)
 		{
-			if (min >= temp->cont && ind == 1)
+			if (min > temp->cont && !temp->index)
 			{
-				temp->index = ind++;
 				min = temp->cont;
+				minimum = temp;
 			}
-			else if (min == temp->cont)
-				temp->index = ind++;
 			temp = temp->next;
 		}
-		min += 1;
+		min = INT_MAX;
+		minimum->index = ind++;
 	}
 }
 

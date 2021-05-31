@@ -24,27 +24,21 @@ void ft_med_sort(t_anb *stack, int count)
 {
 	int step;
 
-	step = 1; // первый раз можно отправлять в функцию а дальше можно передавать рекурсивно
-	while (step <= count)
+	step = 0; // потому что всегда оставляем 3
+	while (step < count - 3)
 	{
-		if ((*(stack->a))->index == step)
+		if ((*(stack->a))->index <= count - 3)
 		{
-			ft_r(stack, 'a');
-			step++;
-		}
-		else if (*(stack->b) && (*(stack->b))->index == step)
-		{
-			ft_p(stack, 'a');
-			ft_r(stack, 'a');
-			step++;
-		}
-		else if (*(stack->b) && (*(stack->b))->next && (*(stack->b))->index > (*(stack->b))->next->index)
-			ft_s(stack, 'r');
-		else if ((*(stack->a))->index > step)
 			ft_p(stack, 'b');
-		else
-			ft_rr(stack, 'b');
+			step++;
+		}
+		ft_rr(stack, 'a');
 	}
+	ft_min_sort(*(stack->a), (*(stack->a))->next, (*(stack->a))->next->next, stack);
+	if (!sort_ch(*(stack->b)))
+		ft_r(stack, 'b');
+	while (*(stack->b))
+		ft_p(stack, 'a');
 }
 
 void ft_max_sort(t_anb *stack, int count)

@@ -29,7 +29,7 @@ static int dubl_ch(t_ps *temp, long res)
 	return (0);
 }
 
-static int sort_ch(t_ps *temp)
+int sort_ch(t_ps *temp)
 {
 	while (temp && temp->next)
 	{
@@ -74,7 +74,7 @@ void push_swap(int argc, char * argv[]){
 
 int main(int argc, const char * argv[])
 {
-	char *mass[18] = {"program", "2323223", "243424432", "1", "5", "44", "94", "-2"};
+	char *mass[18] = {"program", "2323223", "243424432", "1", "5", "-3"};
 	push_swap(3, mass);
 
 
