@@ -9,6 +9,7 @@ t_ps	*new_pslist(int cont, int index)
 	{
 		new->cont = cont;
 		new->index = index;
+		new->place = 0;
 		new->next = NULL;
 		new->back = NULL;
 	}

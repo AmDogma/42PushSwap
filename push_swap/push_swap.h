@@ -7,6 +7,7 @@ typedef struct s_ps
 {
 	int			index;
 	int			cont;
+	int			place;
 	struct s_ps	*next;
 	struct s_ps	*back;
 } t_ps;

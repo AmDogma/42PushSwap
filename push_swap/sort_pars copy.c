@@ -53,6 +53,6 @@ void	ft_sort(t_anb *stack)
 	else if (count < 6)
 		ft_med_sort(stack, count);
 	else
-		ft_med_sort(stack, count); // need to change
+		ft_max_sort(stack, count); // need to change
 }
 

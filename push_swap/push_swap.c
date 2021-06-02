@@ -63,18 +63,27 @@ void push_swap(int argc, char * argv[]){
 	if (sort_ch(*(stack.a)))// тут выход на поиск правильной сортировки в зависимости от кол-ва
 		ft_sort(&stack);
 	temp = *(stack.a); //delete this part
+	i = 1;
 	while (temp)
 	{
-		printf("ind %d | ", temp->index);
+		printf("A %d    ind %d place %d| ", i++, temp->index, temp->place);
 		printf("con %d\n", temp->cont);
 		temp = temp->next;
-	} //delete this part;
+	}
+	temp = *(stack.b);
+	i = 1;
+	while (temp)
+	{
+		printf("B %d    ind %d  place %d| ", i++, temp->index,  temp->place);
+		printf("con %d\n", temp->cont);
+		temp = temp->next;
+	}//delete this part;
 	exit(0);
 }
 
 int main(int argc, const char * argv[])
 {
-	char *mass[18] = {"program", "2323223", "243424432", "1", "5", "-3"};
+	char *mass[28] = {"program", "2323223", "243424432", "1", "5", "-3", "22", "12", "1323223", "143424432", "11", "15", "-13", "122", "112", "3323223", "343424432", "31", "35", "-33", "322", "132"};
 	push_swap(3, mass);
 
 
