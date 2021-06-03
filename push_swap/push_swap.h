@@ -14,8 +14,8 @@ typedef struct s_ps
 
 typedef struct s_anb
 {
-	struct s_ps	**a;
-	struct s_ps	**b;
+	struct s_ps	*a;
+	struct s_ps	*b;
 } t_anb;
 
 long	long_atoi(const char *str);
@@ -31,3 +31,4 @@ void	ft_med_sort(t_anb *stack, int count);
 void	ft_max_sort(t_anb *stack, int count);
 int		ft_count(t_ps *temp);
 int		sort_ch(t_ps *temp);
+int		ind_place(int place, t_ps *temp);

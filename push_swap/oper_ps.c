@@ -27,34 +27,34 @@ static void ft_swap(t_ps **some_list, t_ps *two)
 
 void ft_p(t_anb *stack, char c)
 {
-	if (c == 'a' && *(stack->b))
+	if (c == 'a' && stack->b)
 	{
-		ft_push((stack->a), (stack->b));
+		ft_push(&stack->a, &stack->b);
 		write(1, "pa\n", 3);
 	}
-	else if (c == 'b' && *(stack->a))
+	else if (c == 'b' && stack->a)
 	{
-		ft_push((stack->b), (stack->a));
+		ft_push(&stack->b, &stack->a);
 		write(1, "pb\n", 3);
 	}
 }
 
 void ft_s(t_anb *stack, char c)
 {
-	if (c == 'a' && *(stack->a) && (*(stack->a))->next)
+	if (c == 'a' && stack->a && stack->a->next)
 	{
-		ft_swap(stack->a, (*(stack->a))->next);
+		ft_swap(&stack->a, stack->a->next);
 		write(1, "sa\n", 3);
 	}
-	else if (c == 'b' && *(stack->b) && (*(stack->b))->next)
+	else if (c == 'b' && stack->b && stack->b->next)
 	{
-		ft_swap(stack->b, (*(stack->b))->next);
+		ft_swap(&stack->b, stack->b->next);
 		write(1, "sb\n", 3);
 	}
 	else if (c == 's') //  && *(stack->b) && (*(stack->b))->next && *(stack->a) && (*(stack->a))->next
 	{
-		ft_swap(stack->a, (*(stack->a))->next);
-		ft_swap(stack->b, (*(stack->b))->next);
+		ft_swap(&stack->a, stack->a->next);
+		ft_swap(&stack->b, stack->b->next);
 		write(1, "ss\n", 3);
 	}
 }

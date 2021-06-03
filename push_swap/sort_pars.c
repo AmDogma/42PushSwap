@@ -13,7 +13,7 @@ int	ft_count(t_ps *temp)
 	return (i);
 }
 
-static void	ft_index(t_ps **a, int count)
+static void	ft_index(t_ps *a, int count)
 {
 	int	ind;
 	t_ps *temp;
@@ -21,11 +21,11 @@ static void	ft_index(t_ps **a, int count)
 	int	min;
 
 	ind = 1;
-	min = (*a)->cont;
+	min = a->cont;
 	minimum = NULL;
 	while (count >= ind)
 	{
-		temp = *a;
+		temp = a;
 		while (temp)
 		{
 			if (min > temp->cont && !temp->index)
@@ -44,12 +44,12 @@ void	ft_sort(t_anb *stack)
 {
 	int count;
 
-	count = ft_count(*(stack->a));
+	count = ft_count(stack->a);
 	ft_index(stack->a, count);
 	if (count == 2)
 		ft_s(stack, 'a');
 	else if (count == 3)
-		ft_min_sort(*(stack->a), (*(stack->a))->next, (*(stack->a))->next->next, stack);
+		ft_min_sort(stack->a, stack->a->next, stack->a->next->next, stack);
 	else if (count < 6)
 		ft_med_sort(stack, count);
 	else

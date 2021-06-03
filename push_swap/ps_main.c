@@ -2,15 +2,15 @@
 
 static int	make_t(t_anb *stack)
 {
-	t_ps **a_list;
-	t_ps **b_list;
+	t_ps *a_list;
+	t_ps *b_list;
 
-	a_list = (t_ps **)malloc(sizeof(t_ps *));
-	b_list = (t_ps **)malloc(sizeof(t_ps *));
+	a_list = (t_ps *)malloc(sizeof(t_ps));
+	b_list = (t_ps *)malloc(sizeof(t_ps));
 	if (!a_list || !b_list)
 		return (-1);
-	*a_list = NULL;
-	*b_list = NULL;
+	a_list = NULL;
+	b_list = NULL;
 	stack->a = a_list;
 	stack->b = b_list;
 	return (0);
@@ -53,16 +53,16 @@ void push_swap(int argc, char * argv[]){
 	{
 		res = long_atoi(argv[i]);
 		temp = new_pslist((int)res, 0);
-		if (!temp || !i || dubl_ch(*(stack.a), res)) // нужно чистить возможно перед выходом, если не достаточно exit
+		if (!temp || !i || dubl_ch(stack.a, res)) // нужно чистить возможно перед выходом, если не достаточно exit
 		{
 			write(1, "Error\n", 6);
 			exit(0);
 		}
-		ft_pslstadd_back(stack.a, temp);
+		ft_pslstadd_back(&stack.a, temp);
 	}
-	if (sort_ch(*(stack.a)))// тут выход на поиск правильной сортировки в зависимости от кол-ва
+	if (sort_ch(stack.a))
 		ft_sort(&stack);
-	temp = *(stack.a); //delete this part
+	temp = stack.a; //delete this part
 	i = 1;
 	while (temp)
 	{
@@ -70,7 +70,7 @@ void push_swap(int argc, char * argv[]){
 		printf("con %d\n", temp->cont);
 		temp = temp->next;
 	}
-	temp = *(stack.b);
+	temp = stack.b;
 	i = 1;
 	while (temp)
 	{
