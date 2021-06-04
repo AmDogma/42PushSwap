@@ -81,11 +81,25 @@ void push_swap(int argc, char * argv[]){
 	exit(0);
 }
 
+#include <time.h>
+
 int main(int argc, const char * argv[])
 {
-	char *mass[28] = {"program", "2323223", "243424432", "1", "5", "-3", "22", "12", "1323223", "143424432", "11", "15", "-13", "122", "112", "3323223", "343424432", "31", "35", "-33", "322", "132"};
+	char *mass[103] = {"program", "0"};
+
+	srand((unsigned int)time(NULL));
+
+	for (int i = 2; i < 101; i++)
+	{
+		int num = rand();
+		if (num%2)
+			num = -num;
+		mass[i] = malloc(11);
+		sprintf(mass[i], "%d", num);
+	}
 	push_swap(3, mass);
 
 
 	return 0;
 }
+

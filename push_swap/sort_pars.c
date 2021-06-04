@@ -1,18 +1,5 @@
 #include "push_swap.h"
 
-int	ft_count(t_ps *temp)
-{
-	int	i;
-
-	i = 0;
-	while (temp)
-	{
-		temp = temp->next;
-		i++;
-	}
-	return (i);
-}
-
 static void	ft_index(t_ps *a, int count)
 {
 	int	ind;

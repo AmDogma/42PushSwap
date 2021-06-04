@@ -13,3 +13,4 @@ int ind_place(int place, t_ps *temp)
 	}
 	return(mid);
 }
+

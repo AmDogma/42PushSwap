@@ -16,12 +16,12 @@ static void ft_push(t_ps **to, t_ps **from)
 
 static void ft_swap(t_ps **some_list, t_ps *two)
 {
-	(*some_list)->back = two;
-	two->next->back = *some_list;
+	if (two->next)
+		two->next->back = *some_list;
 	two->back = (*some_list)->back;
+	(*some_list)->back = two;
 	(*some_list)->next = two->next;
 	two->next = *some_list;
-	(*some_list)->back = two;
 	*some_list = two;
 }
 
