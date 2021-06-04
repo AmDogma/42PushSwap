@@ -81,11 +81,11 @@ void push_swap(int argc, char * argv[]){
 	exit(0);
 }
 
-#include <time.h>
+#include <time.h> //del
 
 int main(int argc, const char * argv[])
 {
-	char *mass[103] = {"program", "0"};
+	char *mass[503] = {"program", "0"};
 
 	srand((unsigned int)time(NULL));
 

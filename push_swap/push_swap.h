@@ -31,6 +31,6 @@ void	ft_med_sort(t_anb *stack, int count);
 void	ft_max_sort(t_anb *stack, int count);
 int		ft_count(t_ps *temp);
 int		sort_ch(t_ps *temp);
-int		ind_place(int place, t_ps *temp);
+int		ind_place(int place, t_ps *temp, int index);
 t_ps	*last_list(t_ps *temp);
 

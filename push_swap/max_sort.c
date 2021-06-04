@@ -59,10 +59,36 @@ static int ft_toa_last(t_anb *stack, int mid, int index)
 			ft_p(stack, 'a');
 		else if (stack->b->next && stack->b->next->index == index)
 			ft_s(stack, 'b');
+		else if (stack->a->next->index == index)
+			ft_s(stack, 'a');
 		else if (last_list(stack->b)->index == index)
 			ft_rr(stack, 'b');
 		else
 			ft_r(stack, 'b'); // in wich side we will turn?
+	}
+	return (index);
+}
+
+static int ft_tob_split(t_anb *stack, int mid, int index, int place)
+{
+	while (mid - index > 1 && stack->a->place == place && stack->a->index >= index) // ??чек нужен на след вызове
+	{
+		if (stack->a->index == index)
+		{
+			ft_r(stack, 'a');
+			index++;
+		}
+		else if (stack->b && stack->b->index == index)
+			ft_p(stack, 'a');
+		else if	(stack->b && stack->b->next && stack->b->next->index == index)
+			ft_s(stack, 'b');
+		else if (stack->a->next->index == index)
+			ft_s(stack, 'a');
+		else
+		{
+			ft_p(stack, 'b');
+			mid++;
+		}
 	}
 	return (index);
 }
@@ -76,11 +102,13 @@ void ft_max_sort(t_anb *stack, int count)
 	place = 1;
 	index = 1;
 	mid = (count/2) + index;
+	int delete = 0; // delete
 	ft_tob_first(stack, mid); // step 1
-	while (count != index)
+	while (count >= index)
 	{
-		while (mid)
+		while (stack->b)
 		{
+			mid = ft_count(stack->b);
 			if (mid < 4)
 				index = ft_toa_last(stack, mid, index); // can make <6 min values with complex drop logic
 			else
@@ -88,15 +116,13 @@ void ft_max_sort(t_anb *stack, int count)
 				mid = mid/2 + index; // можно проверять чтобы не больше 5 уходило и вычислять мидл каждый раз снова
 				index = ft_toa_split(stack, mid, index, place++);
 			}
-			mid = ft_count(stack->b);
 		}
-		mid = ind_place(--place, stack->a);
-		break;
-//		mid = ind_place (--place, stack->a);
-//		mid = ((mid - index)/2) + index;
-		//		ft_tob_first(stack, mid); нужно другую функцию прописать, которая будет отматывать под сортированный список
+		mid = ind_place(--place, stack->a, index); // нужно заново считать или возв кол-во как ft_count
+		index = ft_tob_split(stack, mid, index, place);
 
 
+//		if (delete++ >2)
+//			break;
 	}
 
 
