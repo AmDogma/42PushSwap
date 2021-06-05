@@ -1,15 +1,12 @@
 #include "push_swap.h"
 int GLOB = 0; // del
 #include <time.h> //del
+#include	"leak_detector_c.h"
 static int	make_t(t_anb *stack)
 {
 	t_ps *a_list;
 	t_ps *b_list;
 
-	a_list = (t_ps *)malloc(sizeof(t_ps));
-	b_list = (t_ps *)malloc(sizeof(t_ps));
-	if (!a_list || !b_list)
-		return (-1);
 	a_list = NULL;
 	b_list = NULL;
 	stack->a = a_list;
@@ -87,19 +84,23 @@ void push_swap(int argc, char * argv[]){
 
 int main(int argc, const char * argv[])
 {
-	char *mass[503] = {"program", "0"};
+	atexit(report_mem_leak);   // comment_it
+
+	char *mass[502] = {"program"};
 
 	srand((unsigned int)time(NULL));
-
-	for (int i = 2; i < 501; i++)
+	int num;
+	for (int i = 1; i < 501; i++)
 	{
-		int num = rand();
-		if (num%2)
-			num = -num;
+		num = rand();
 		mass[i] = malloc(11);
 		sprintf(mass[i], "%d", num);
+		num = i;
 	}
 	push_swap(3, mass);
+	while(num > 0)
+		free(mass[num--]);
+	printf("GLOB = %d", GLOB);
 
 	return 0;
 }
