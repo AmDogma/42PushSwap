@@ -87,11 +87,11 @@ void push_swap(int argc, char * argv[]){
 
 int main(int argc, const char * argv[])
 {
-	char *mass[103] = {"program", "0"};
+	char *mass[503] = {"program", "0"};
 
 	srand((unsigned int)time(NULL));
 
-	for (int i = 2; i < 101; i++)
+	for (int i = 2; i < 501; i++)
 	{
 		int num = rand();
 		if (num%2)
