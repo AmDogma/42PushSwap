@@ -1,17 +1,27 @@
 #include "push_swap.h"
 
-static void ft_tob_first(t_anb *stack, int mid)
+static void ft_tob_first(t_anb *stack, int mid, int index)
 {
 	int i = 0;
-	while (i < mid)
+	while (i < mid + 1)
 	{
-		if (stack->a->index <= mid)
+		if (stack->b && stack->b->index == index)
+		{
+			ft_r(stack, 'b');
+			index++;
+		}
+		else if (stack->a->index <= mid + 1)
 		{
 			ft_p(stack, 'b');
 			i++;
 		}
 		else
 			ft_r(stack, 'a'); // in wich side we will turn? can be some ft fo find optimal
+	}
+	while (index > 1) // can be separate ft
+	{
+		ft_rr(stack, 'b');
+		index--;
 	}
 }
 
@@ -101,9 +111,8 @@ void ft_max_sort(t_anb *stack, int count)
 
 	place = 1;
 	index = 1;
-	mid = (count/2) + index;
 	int delete = 0; // delete
-	ft_tob_first(stack, mid); // step 1
+	ft_tob_first(stack, count/2, index); // step 1
 	while (count >= index)
 	{
 		while (stack->b)
@@ -120,9 +129,8 @@ void ft_max_sort(t_anb *stack, int count)
 		mid = ind_place(--place, stack->a, index); // нужно заново считать или возв кол-во как ft_count
 		index = ft_tob_split(stack, mid, index, place);
 
-
-//		if (delete++ >2)
-//			break;
+		if (delete++ >9)
+			break;
 	}
 
 

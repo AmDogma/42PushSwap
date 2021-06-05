@@ -34,17 +34,20 @@ void ft_r(t_anb *stack, char c)
 	{
 		ft_rotate(&stack->a);
 		write(1, "ra\n", 3);
+		GLOB++;
 	}
 	else if (c == 'b' && stack->b && stack->b->next)
 	{
 		ft_rotate(&stack->b);
 		write(1, "rb\n", 3);
+		GLOB++;
 	}
 	else if (c == 'r') // && *(stack->b) && (*(stack->b))->next && *(stack->a) && (*(stack->a))->next
 	{
 		ft_rotate(&stack->a);
 		ft_rotate(&stack->b);
 		write(1, "rr\n", 3);
+		GLOB++;
 	}
 }
 
@@ -54,17 +57,20 @@ void ft_rr(t_anb *stack, char c)
 	{
 		ft_rotate_r(&stack->a);
 		write(1, "rra\n", 4);
+		GLOB++;
 	}
 	else if (c == 'b' && stack->b && stack->b->next)
 	{
 		ft_rotate_r(&stack->b);
 		write(1, "rrb\n", 4);
+		GLOB++;
 	}
 	else if (c == 'r') // && *(stack->b) && (*(stack->b))->next && *(stack->a) && (*(stack->a))->next
 	{
 		ft_rotate_r(&stack->a);
 		ft_rotate_r(&stack->b);
 		write(1, "rrr\n", 4);
+		GLOB++;
 	}
 }
 

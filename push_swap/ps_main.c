@@ -1,5 +1,6 @@
 #include "push_swap.h"
-
+int GLOB = 0; // del
+#include <time.h> //del
 static int	make_t(t_anb *stack)
 {
 	t_ps *a_list;
@@ -77,15 +78,16 @@ void push_swap(int argc, char * argv[]){
 		printf("B %d    ind %d  place %d| ", i++, temp->index,  temp->place);
 		printf("con %d\n", temp->cont);
 		temp = temp->next;
-	}//delete this part;
+	}
+	printf("GLOB = %d", GLOB); //delete this part;
 	exit(0);
 }
 
-#include <time.h> //del
+
 
 int main(int argc, const char * argv[])
 {
-	char *mass[503] = {"program", "0"};
+	char *mass[103] = {"program", "0"};
 
 	srand((unsigned int)time(NULL));
 
@@ -98,7 +100,6 @@ int main(int argc, const char * argv[])
 		sprintf(mass[i], "%d", num);
 	}
 	push_swap(3, mass);
-
 
 	return 0;
 }

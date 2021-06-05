@@ -31,11 +31,13 @@ void ft_p(t_anb *stack, char c)
 	{
 		ft_push(&stack->a, &stack->b);
 		write(1, "pa\n", 3);
+		GLOB++;
 	}
 	else if (c == 'b' && stack->a)
 	{
 		ft_push(&stack->b, &stack->a);
 		write(1, "pb\n", 3);
+		GLOB++;
 	}
 }
 
@@ -45,16 +47,19 @@ void ft_s(t_anb *stack, char c)
 	{
 		ft_swap(&stack->a, stack->a->next);
 		write(1, "sa\n", 3);
+		GLOB++;
 	}
 	else if (c == 'b' && stack->b && stack->b->next)
 	{
 		ft_swap(&stack->b, stack->b->next);
 		write(1, "sb\n", 3);
+		GLOB++;
 	}
 	else if (c == 's') //  && *(stack->b) && (*(stack->b))->next && *(stack->a) && (*(stack->a))->next
 	{
 		ft_swap(&stack->a, stack->a->next);
 		ft_swap(&stack->b, stack->b->next);
 		write(1, "ss\n", 3);
+		GLOB++;
 	}
 }

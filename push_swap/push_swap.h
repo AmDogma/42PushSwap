@@ -12,6 +12,8 @@ typedef struct s_ps
 	struct s_ps	*back;
 } t_ps;
 
+extern int GLOB; // del
+
 typedef struct s_anb
 {
 	struct s_ps	*a;
