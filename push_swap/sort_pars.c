@@ -1,30 +1,44 @@
 #include "push_swap.h"
 
-static void	ft_index(t_ps *a, int count)
+static void	ft_min_sort(t_ps *one, t_ps *two, t_ps *three, t_anb *stack)
 {
-	int	ind;
-	t_ps *temp;
-	t_ps *minimum;
-	int	min;
-
-	ind = 1;
-	min = a->cont;
-	minimum = NULL;
-	while (count >= ind)
+	if (one->cont > two->cont && two->cont > three->cont)
 	{
-		temp = a;
-		while (temp)
-		{
-			if (min > temp->cont && !temp->index)
-			{
-				min = temp->cont;
-				minimum = temp;
-			}
-			temp = temp->next;
-		}
-		min = INT_MAX;
-		minimum->index = ind++;
+		ft_s(stack, 'a');
+		ft_rr(stack, 'a');
 	}
+	if (one->cont < three->cont && two->cont > three->cont)
+	{
+		ft_s(stack, 'a');
+		ft_r(stack, 'a');
+	}
+	if (one->cont > two->cont && one->cont < three->cont)
+		ft_s(stack, 'a');
+	if (one->cont > three->cont && two->cont < three->cont)
+		ft_r(stack, 'a');
+	if (one->cont > three->cont && two->cont > one->cont)
+		ft_rr(stack, 'a');
+}
+
+static void ft_med_sort(t_anb *stack, int count)
+{
+	int step;
+
+	step = 0;
+	while (step < count - 3)
+	{
+		if (stack->a->index <= count - 3)
+		{
+			ft_p(stack, 'b');
+			step++;
+		}
+		ft_rr(stack, 'a');
+	}
+	ft_min_sort(stack->a, stack->a->next, stack->a->next->next, stack);
+	if (!sort_ch(stack->b))
+		ft_r(stack, 'b');
+	while (stack->b)
+		ft_p(stack, 'a');
 }
 
 void	ft_sort(t_anb *stack)
@@ -40,6 +54,6 @@ void	ft_sort(t_anb *stack)
 	else if (count < 6)
 		ft_med_sort(stack, count);
 	else
-		ft_max_sort(stack, count); // need to change
+		ft_max_sort(stack, count);
 }
 

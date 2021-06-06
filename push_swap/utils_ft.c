@@ -6,7 +6,7 @@ int ind_place(int *place, t_ps *temp, int index)
 
 	count = 0;
 	*place = temp->place;
-	while (temp && temp->place == *place && temp->index >= index) // 999 не нужно писать если все работать будет
+	while (temp && temp->place == *place && temp->index >= index)
 	{
 		count++;
 		temp = temp->next;
@@ -14,32 +14,52 @@ int ind_place(int *place, t_ps *temp, int index)
 	return(count);
 }
 
-void turn_find(t_anb *stack, int index) // maybe formula - count will be shorter
+void turn_find(t_anb *stack, t_ps *temp, int index)
 {
-	t_ps *temp;
 	int begin;
 	int last;
 
 	last = 0;
 	begin = 0;
-	temp = last_list(stack->b);
-	while (temp->back)
+	while (temp->next && index != temp->index && index + 1 != temp->index)
 	{
-		if (index == temp->index || index + 1 == temp->index)
-			break;
-		last++;
-		temp = temp->back;
-	}
-	temp = stack->b;
-	while (temp->next)
-	{
-		if (index == temp->index || index + 1 == temp->index)
-			break;
 		begin++;
 		temp = temp->next;
+	}
+	while (temp->back && index != temp->index && index + 1 != temp->index)
+	{
+		last++;
+		temp = temp->back;
 	}
 	if (last < begin)
 		ft_rr(stack, 'b');
 	else
 		ft_r(stack, 'b');
+}
+
+void	ft_index(t_ps *a, int count)
+{
+	int	ind;
+	int	max;
+	t_ps *temp;
+	t_ps *minimum;
+
+	ind = 1;
+	minimum = NULL;
+	while (count >= ind)
+	{
+		temp = a;
+		max = 2147483647;
+		while (temp)
+		{
+			if (max >= temp->cont && !temp->index)
+			{
+				max = temp->cont;
+				minimum = temp;
+			}
+			temp = temp->next;
+		}
+		if (minimum)
+			minimum->index = ind++;
+	}
 }

@@ -24,22 +24,23 @@ static void ft_tob_first(t_anb *stack, int mid, int index)
 		ft_rr(stack, 'b');
 }
 
-static int ft_toa_split(t_anb *stack, int mid, int index, int place)
+static void ft_toa_split(t_anb *stack, int mid, int *index, int place)
 {
 	int i;
 
 	i = mid;
-	mid = ((mid + 1) / 2) + index;
+	mid = ((mid + 1) / 2) + *index;
 	while (i--)
 	{
-		if (stack->b->index == index && mid - index > 1)
+		if (stack->b->index == *index && mid - *index > 1)
 		{
 			ft_p(stack, 'a');
-			if (stack->b && stack->b->index < mid && stack->b->index != index + 1)
+			if (stack->b && stack->b->index < mid &&
+				stack->b->index != *index + 1)
 				ft_r(stack, 'r');
 			else
 				ft_r(stack, 'a');
-			index++;
+			(*index)++;
 		}
 		else if (stack->b->index >= mid)
 		{
@@ -49,7 +50,6 @@ static int ft_toa_split(t_anb *stack, int mid, int index, int place)
 		else
 			ft_r(stack, 'b');
 	}
-	return (index);
 }
 
 static int ft_toa_last(t_anb *stack, int mid, int index)
@@ -75,7 +75,7 @@ static int ft_toa_last(t_anb *stack, int mid, int index)
 		else if (stack->a->next->index == index + 1)
 			ft_s(stack, 'a');
 		else
-			turn_find(stack, index);
+			turn_find(stack, stack->b, index);
 	}
 	return (index);
 }
@@ -116,10 +116,10 @@ void ft_max_sort(t_anb *stack, int count)
 		while (stack->b)
 		{
 			mid = ft_count(stack->b);
-			if (mid < 6)
+			if (mid < 7)
 				index = ft_toa_last(stack, mid, index);
 			else
-				index = ft_toa_split(stack, mid, index, ++place);
+				ft_toa_split(stack, mid, &index, ++place);
 		}
 		mid = ind_place(&place, stack->a, index);
 		index = ft_tob(stack, mid + index, index, place);
