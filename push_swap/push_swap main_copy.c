@@ -4,42 +4,6 @@
 //#include <time.h> //del
 //#include <stdio.h> // del this
 //#include	"leak_detector_c.h" // del this
-//static int	make_t(t_anb *stack)
-//{
-//	t_ps *a_list;
-//	t_ps *b_list;
-//
-//	a_list = NULL;
-//	b_list = NULL;
-//	stack->a = a_list;
-//	stack->b = b_list;
-//	return (0);
-//}
-//
-//static int dubl_ch(t_ps *temp, long res)
-//{
-//	while (temp)
-//	{
-//		if (res == (long)temp->cont)
-//			return (1);
-//		temp = temp->next;
-//	}
-//	if (res > 2147483647 || res < -2147483648)
-//		return (1);
-//	return (0);
-//}
-//
-//int sort_ch(t_ps *temp)
-//{
-//	while (temp && temp->next)
-//	{
-//		if (temp->cont < temp->next->cont)
-//			temp = temp->next;
-//		else
-//			return (1);
-//	}
-//	return (0);
-//}
 //
 //void push_swap(int argc, char * argv[]){
 //
@@ -48,12 +12,13 @@
 //	t_ps	*temp;
 //	long	res;
 //
-//	i = make_t(&stack);
+//	make_t(&stack);
+//  i = 0;
 //	while (argv[++i])
 //	{
 //		res = long_atoi(argv[i]);
 //		temp = new_pslist((int)res, 0);
-//		if (!temp || !i || dubl_ch(stack.a, res)) // нужно чистить возможно перед выходом, если не достаточно exit
+//		if (!temp || dubl_ch(stack.a, res)) // нужно чистить возможно перед выходом, если не достаточно exit
 //		{
 //			write(1, "Error\n", 6);
 //			exit(0);
@@ -86,7 +51,7 @@
 //{
 //	atexit(report_mem_leak);   // comment_it
 //
-//	char *mass[502] = {"program", "2147483647"};
+//	char *mass[502] = {"program", "-214748364"};
 //
 //	srand((unsigned int)time(NULL));
 //	int num;

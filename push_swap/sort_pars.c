@@ -20,9 +20,9 @@ static void	ft_min_sort(t_ps *one, t_ps *two, t_ps *three, t_anb *stack)
 		ft_rr(stack, 'a');
 }
 
-static void ft_med_sort(t_anb *stack, int count)
+static void	ft_med_sort(t_anb *stack, int count)
 {
-	int step;
+	int	step;
 
 	step = 0;
 	while (step < count - 3)
@@ -43,7 +43,7 @@ static void ft_med_sort(t_anb *stack, int count)
 
 void	ft_sort(t_anb *stack)
 {
-	int count;
+	int	count;
 
 	count = ft_count(stack->a);
 	ft_index(stack->a, count);
@@ -56,4 +56,3 @@ void	ft_sort(t_anb *stack)
 	else
 		ft_max_sort(stack, count);
 }
-

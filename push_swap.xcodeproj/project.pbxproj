@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241132AF266E767400D52652 /* checker_main copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 241132AE266E767400D52652 /* checker_main copy.c */; };
+		243C1014266E33AD00A8BA07 /* checker_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 243C1013266E33AD00A8BA07 /* checker_main.c */; };
+		243C1016266E33DB00A8BA07 /* bon_oper_ps.c in Sources */ = {isa = PBXBuildFile; fileRef = 243C1015266E33DB00A8BA07 /* bon_oper_ps.c */; };
+		243C1018266E33DE00A8BA07 /* bon_oper_r.c in Sources */ = {isa = PBXBuildFile; fileRef = 243C1017266E33DD00A8BA07 /* bon_oper_r.c */; };
+		243C101A266E34B000A8BA07 /* utils_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 243C1019266E34B000A8BA07 /* utils_main.c */; };
+		243C101C266E3A1400A8BA07 /* utils_ch.c in Sources */ = {isa = PBXBuildFile; fileRef = 243C101B266E3A1300A8BA07 /* utils_ch.c */; };
 		244A7F26265E848700E703C2 /* oper_r.c in Sources */ = {isa = PBXBuildFile; fileRef = 244A7F25265E848700E703C2 /* oper_r.c */; };
 		245CCEF9266C0DCD00098011 /* leak_detector_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 245CCEF8266C0DCD00098011 /* leak_detector_c.c */; };
-		249162B6265D1DEC002DA805 /* push_swap.c in Sources */ = {isa = PBXBuildFile; fileRef = 249162B5265D1DEC002DA805 /* push_swap.c */; };
-		24916321265D23D1002DA805 /* utils_atoi.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916320265D23D1002DA805 /* utils_atoi.c */; };
+		249162B6265D1DEC002DA805 /* push_swap_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 249162B5265D1DEC002DA805 /* push_swap_main.c */; };
 		24916323265D2644002DA805 /* push_swap.h in Sources */ = {isa = PBXBuildFile; fileRef = 24916322265D2644002DA805 /* push_swap.h */; };
 		24916325265D288D002DA805 /* utils_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916324265D288D002DA805 /* utils_list.c */; };
 		24916329265D7658002DA805 /* oper_ps.c in Sources */ = {isa = PBXBuildFile; fileRef = 24916328265D7658002DA805 /* oper_ps.c */; };
 		24A10923265FBABB00047FAD /* sort_pars.c in Sources */ = {isa = PBXBuildFile; fileRef = 24A10922265FBABB00047FAD /* sort_pars.c */; };
-		24C1A833266D089200985D3B /* push_swap copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C1A832266D089200985D3B /* push_swap copy.c */; };
+		24C1A833266D089200985D3B /* push_swap main_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C1A832266D089200985D3B /* push_swap main_copy.c */; };
 		24C1A835266D08A600985D3B /* oper_ps copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C1A834266D08A600985D3B /* oper_ps copy.c */; };
 		24C1A837266D08AE00985D3B /* oper_r copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 24C1A836266D08AD00985D3B /* oper_r copy.c */; };
+		24C1A83A266D158000985D3B /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 24C1A839266D158000985D3B /* Makefile */; };
 		24E23440266963D800CE5EC8 /* max_sort.c in Sources */ = {isa = PBXBuildFile; fileRef = 24E2343F266963D800CE5EC8 /* max_sort.c */; };
 		24E234422669648E00CE5EC8 /* utils_ft.c in Sources */ = {isa = PBXBuildFile; fileRef = 24E234412669648E00CE5EC8 /* utils_ft.c */; };
 /* End PBXBuildFile section */
@@ -35,20 +41,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		241132AE266E767400D52652 /* checker_main copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "checker_main copy.c"; sourceTree = "<group>"; };
+		243C1013266E33AD00A8BA07 /* checker_main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = checker_main.c; sourceTree = "<group>"; };
+		243C1015266E33DB00A8BA07 /* bon_oper_ps.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bon_oper_ps.c; sourceTree = "<group>"; };
+		243C1017266E33DD00A8BA07 /* bon_oper_r.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bon_oper_r.c; sourceTree = "<group>"; };
+		243C1019266E34B000A8BA07 /* utils_main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils_main.c; sourceTree = "<group>"; };
+		243C101B266E3A1300A8BA07 /* utils_ch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils_ch.c; sourceTree = "<group>"; };
 		244A7F25265E848700E703C2 /* oper_r.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = oper_r.c; sourceTree = "<group>"; };
 		245CCEF7266C0DCD00098011 /* leak_detector_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leak_detector_c.h; sourceTree = "<group>"; };
 		245CCEF8266C0DCD00098011 /* leak_detector_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = leak_detector_c.c; sourceTree = "<group>"; };
 		249162B2265D1DEC002DA805 /* push_swap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = push_swap; sourceTree = BUILT_PRODUCTS_DIR; };
-		249162B5265D1DEC002DA805 /* push_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = push_swap.c; sourceTree = "<group>"; };
-		24916320265D23D1002DA805 /* utils_atoi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils_atoi.c; sourceTree = "<group>"; };
+		249162B5265D1DEC002DA805 /* push_swap_main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = push_swap_main.c; sourceTree = "<group>"; };
 		24916322265D2644002DA805 /* push_swap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = push_swap.h; sourceTree = "<group>"; };
 		24916324265D288D002DA805 /* utils_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils_list.c; sourceTree = "<group>"; };
 		24916328265D7658002DA805 /* oper_ps.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = oper_ps.c; sourceTree = "<group>"; };
 		24A10922265FBABB00047FAD /* sort_pars.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sort_pars.c; sourceTree = "<group>"; };
-		24C1A832266D089200985D3B /* push_swap copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "push_swap copy.c"; sourceTree = "<group>"; };
+		24C1A832266D089200985D3B /* push_swap main_copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "push_swap main_copy.c"; sourceTree = "<group>"; };
 		24C1A834266D08A600985D3B /* oper_ps copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "oper_ps copy.c"; sourceTree = "<group>"; };
 		24C1A836266D08AD00985D3B /* oper_r copy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "oper_r copy.c"; sourceTree = "<group>"; };
-		24C1A838266D0F2600985D3B /* push_swap copy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "push_swap copy.h"; sourceTree = "<group>"; };
+		24C1A838266D0F2600985D3B /* push_swap_copy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = push_swap_copy.h; sourceTree = "<group>"; };
+		24C1A839266D158000985D3B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		24E2343F266963D800CE5EC8 /* max_sort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = max_sort.c; sourceTree = "<group>"; };
 		24E234412669648E00CE5EC8 /* utils_ft.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils_ft.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,17 +95,23 @@
 		249162B4265D1DEC002DA805 /* push_swap */ = {
 			isa = PBXGroup;
 			children = (
-				249162B5265D1DEC002DA805 /* push_swap.c */,
+				24C1A839266D158000985D3B /* Makefile */,
+				249162B5265D1DEC002DA805 /* push_swap_main.c */,
+				243C1013266E33AD00A8BA07 /* checker_main.c */,
+				243C1015266E33DB00A8BA07 /* bon_oper_ps.c */,
+				243C1017266E33DD00A8BA07 /* bon_oper_r.c */,
 				24A10922265FBABB00047FAD /* sort_pars.c */,
 				24E2343F266963D800CE5EC8 /* max_sort.c */,
 				24916328265D7658002DA805 /* oper_ps.c */,
 				244A7F25265E848700E703C2 /* oper_r.c */,
-				24916320265D23D1002DA805 /* utils_atoi.c */,
 				24916324265D288D002DA805 /* utils_list.c */,
+				243C101B266E3A1300A8BA07 /* utils_ch.c */,
+				243C1019266E34B000A8BA07 /* utils_main.c */,
 				24E234412669648E00CE5EC8 /* utils_ft.c */,
 				24916322265D2644002DA805 /* push_swap.h */,
-				24C1A838266D0F2600985D3B /* push_swap copy.h */,
-				24C1A832266D089200985D3B /* push_swap copy.c */,
+				24C1A838266D0F2600985D3B /* push_swap_copy.h */,
+				241132AE266E767400D52652 /* checker_main copy.c */,
+				24C1A832266D089200985D3B /* push_swap main_copy.c */,
 				24C1A834266D08A600985D3B /* oper_ps copy.c */,
 				24C1A836266D08AD00985D3B /* oper_r copy.c */,
 				245CCEF7266C0DCD00098011 /* leak_detector_c.h */,
@@ -161,17 +179,23 @@
 			files = (
 				24E23440266963D800CE5EC8 /* max_sort.c in Sources */,
 				24E234422669648E00CE5EC8 /* utils_ft.c in Sources */,
+				243C101A266E34B000A8BA07 /* utils_main.c in Sources */,
+				243C1014266E33AD00A8BA07 /* checker_main.c in Sources */,
+				241132AF266E767400D52652 /* checker_main copy.c in Sources */,
 				24916329265D7658002DA805 /* oper_ps.c in Sources */,
+				243C1018266E33DE00A8BA07 /* bon_oper_r.c in Sources */,
 				24A10923265FBABB00047FAD /* sort_pars.c in Sources */,
 				244A7F26265E848700E703C2 /* oper_r.c in Sources */,
-				24916321265D23D1002DA805 /* utils_atoi.c in Sources */,
 				24C1A835266D08A600985D3B /* oper_ps copy.c in Sources */,
+				243C101C266E3A1400A8BA07 /* utils_ch.c in Sources */,
 				24C1A837266D08AE00985D3B /* oper_r copy.c in Sources */,
 				24916323265D2644002DA805 /* push_swap.h in Sources */,
 				24916325265D288D002DA805 /* utils_list.c in Sources */,
+				243C1016266E33DB00A8BA07 /* bon_oper_ps.c in Sources */,
 				245CCEF9266C0DCD00098011 /* leak_detector_c.c in Sources */,
-				249162B6265D1DEC002DA805 /* push_swap.c in Sources */,
-				24C1A833266D089200985D3B /* push_swap copy.c in Sources */,
+				249162B6265D1DEC002DA805 /* push_swap_main.c in Sources */,
+				24C1A83A266D158000985D3B /* Makefile in Sources */,
+				24C1A833266D089200985D3B /* push_swap main_copy.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
