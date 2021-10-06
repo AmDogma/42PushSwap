@@ -35,22 +35,20 @@ void	ft_pslstadd_back(t_ps **lst, t_ps *new)
 	}
 }
 
-int	ft_count(t_ps *temp)
-{
-	int	i;
-
-	i = 0;
-	while (temp)
-	{
-		temp = temp->next;
-		i++;
-	}
-	return (i);
-}
-
 t_ps	*last_list(t_ps *temp)
 {
 	while (temp->next)
 		temp = temp->next;
 	return (temp);
+}
+
+void	make_t(t_anb *stack)
+{
+	t_ps	*a_list;
+	t_ps	*b_list;
+
+	a_list = NULL;
+	b_list = NULL;
+	stack->a = a_list;
+	stack->b = b_list;
 }

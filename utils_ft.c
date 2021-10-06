@@ -1,8 +1,8 @@
 #include "push_swap.h"
 
-int ind_place(int *place, t_ps *temp, int index)
+int	ind_place(int *place, t_ps *temp, int index)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	*place = temp->place;
@@ -11,13 +11,13 @@ int ind_place(int *place, t_ps *temp, int index)
 		count++;
 		temp = temp->next;
 	}
-	return(count);
+	return (count);
 }
 
-void turn_find(t_anb *stack, t_ps *temp, int index)
+void	turn_find(t_anb *stack, t_ps *temp, int index)
 {
-	int begin;
-	int last;
+	int	begin;
+	int	last;
 
 	last = 0;
 	begin = 0;
@@ -39,10 +39,10 @@ void turn_find(t_anb *stack, t_ps *temp, int index)
 
 void	ft_index(t_ps *a, int count)
 {
-	int	ind;
-	int	max;
-	t_ps *temp;
-	t_ps *minimum;
+	int		ind;
+	int		max;
+	t_ps	*temp;
+	t_ps	*minimum;
 
 	ind = 1;
 	minimum = NULL;
@@ -62,4 +62,32 @@ void	ft_index(t_ps *a, int count)
 		if (minimum)
 			minimum->index = ind++;
 	}
+}
+
+long	long_atoi(const char *str)
+{
+	int		minus;
+	long	res;
+
+	minus = 1;
+	res = 0;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			minus = -minus;
+		str++;
+	}
+	if (*str < 48 || *str > 57)
+		res = -21474836488;
+	while (*str)
+	{
+		if (res > 2147483647 || res < -2147483648
+			|| !(*str >= '0' && *str <= '9'))
+		{
+			res = -21474836488;
+			break ;
+		}
+		res = (res * 10) + (((*str++) - 48) * minus);
+	}
+	return (res);
 }
